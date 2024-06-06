@@ -6,6 +6,9 @@ import { Route, Routes } from "react-router-dom";
 import AuthProvider from "./context/AuthProvider";
 import ProtectedRoute from "./components/ProtectedRoute";
 import PublicRoute from "./components/PublicRoute";
+import NotFound from "./pages/NotFound";
+import Spinner from "./components/Spinner";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -35,6 +38,8 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="*" element={<NotFound />} />
+        <Route path="test" element={<Home />} />
       </Routes>
     </AuthProvider>
   );
