@@ -1,13 +1,20 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
-    <div className="flex items-center py-5 px-28 text-red-600">
-      <span className="text-xl font-bold">CineSuggest</span>
+    <div className="flex items-center py-5 px-8 xl:px-28 text-red-600 relative z-10 bg-black">
+      <span className="text-xl font-bold cursor-pointer" onClick={() => navigate("/home")}>
+        CineSuggest
+      </span>
       <div className="flex flex-1 gap-16 text-white justify-center">
-        <a className="text-sm font-medium active:text-red-600 cursor-pointer">
+        <Link
+          to={"/home"}
+          className="text-sm font-medium active:text-red-600 cursor-pointer"
+        >
           Home
-        </a>
+        </Link>
         <a className="text-sm font-medium active:text-red-600 cursor-pointer">
           Feature
         </a>

@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/home/Header";
 import Hero from "../components/home/Hero";
+import MovieList from "../components/home/MovieList";
 const Home = () => {
   return (
     <div>
@@ -8,6 +9,7 @@ const Home = () => {
         <Header />
         <Hero />
       </div>
+      <MovieList />
     </div>
   );
 };
